@@ -1,5 +1,6 @@
 import express from "express";
 import { connect } from "./config/database.js";
+import { PORT } from "./config/server-config.js"
 
 import apiRoutes from "./routes/index.js";
 
@@ -11,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api", apiRoutes);
 
-app.listen(3002, async () => {
+app.listen(PORT, async () => {
   console.log("Server started");
   await connect();
 });
