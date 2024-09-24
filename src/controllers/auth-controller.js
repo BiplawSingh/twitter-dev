@@ -1,4 +1,3 @@
-import User from "../models/user.js";
 import UserService from "../services/user-service.js";
 
 const userService = new UserService();
