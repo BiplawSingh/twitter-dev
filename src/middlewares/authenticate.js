@@ -7,7 +7,7 @@ export const authenticate = (req, res, next) => {
             return res.status(401).json({
                 message: "Unauthorised access"
             })
-        }
+        }b 
         req.user = user;
         next();
     })(req, res, next);
